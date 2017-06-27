@@ -1,0 +1,1 @@
+angular.module('billingCycleApp', ['ui.router', 'ngAnimate', 'toastr'])
