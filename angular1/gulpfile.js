@@ -1,6 +1,5 @@
-
 const gulp = require('gulp');
-const klaw = require('klaw')
+const klaw = require('klaw');
 const util = require('gulp-util');
 
 require('./gulpTasks/app');
