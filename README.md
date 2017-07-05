@@ -3,7 +3,7 @@ Projeto desenvolvido como parte do curso de desenvolvimento Web com Mongo, Expre
 Para utilizar o projeto, é necessário executar os seguintes comandos no prompt:
 
 - Iniciar o banco MongoDB com o comando "mongod"
-- Na pasta "backend" do projeto, executar o comando "npm run dev"
+- Na pasta "backend" do projeto, executar o comando "npm run production"
 - Na pasta "angular1" do projeto, executar o mesmo comando "npm run dev"
 
 O browser irá abrir automaticamente com a aplicação já funcionando.
