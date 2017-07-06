@@ -1,8 +1,10 @@
-angular.module('billingCycleApp').controller('DashboardCtrl', ['$scope', '$http', DashboardController]);
+(function(){
 
-function DashboardController($scope, $http){
+angular.module('billingCycleApp').controller('DashboardCtrl', ['$http', DashboardController]);
 
-    $scope.getSummary = function(){
+function DashboardController($http){
+    const vm = this;
+    vm.getSummary = function(){
         
         const url = 'http://localhost:3003/api/billingSummary';
 
@@ -11,13 +13,15 @@ function DashboardController($scope, $http){
             //Atribui um valor padrão para o crédito/débito para evitar que o valor seja nulo.
             const {credit = 0, debt = 0} = response.data;
 
-            $scope.credit = credit;
-            $scope.debt = debt;
-            $scope.total = credit - debt;
+            vm.credit = credit;
+            vm.debt = debt;
+            vm.total = credit - debt;
         });
     }
 
     //Ao iniciar a aplicação, já chama as funções abaixo.
-    $scope.getSummary();
+    vm.getSummary();
 
 }
+
+})();

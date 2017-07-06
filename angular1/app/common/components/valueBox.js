@@ -1,3 +1,5 @@
+(function(){
+
 angular.module('billingCycleApp').component('valueBox', {
     bindings: {
         grid: '@',
@@ -25,3 +27,5 @@ angular.module('billingCycleApp').component('valueBox', {
     </div>
     `
 });
+
+})();

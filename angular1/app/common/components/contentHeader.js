@@ -1,3 +1,5 @@
+(function(){
+
 angular.module('billingCycleApp').component('contentHeader', {
     bindings: {
         name: '@',
@@ -9,3 +11,6 @@ angular.module('billingCycleApp').component('contentHeader', {
         </section>
     `
 });
+
+})();
+

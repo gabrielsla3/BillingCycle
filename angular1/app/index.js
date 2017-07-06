@@ -1,1 +1,1 @@
-angular.module('billingCycleApp', ['ui.router', 'ngAnimate', 'toastr'])
+angular.module('billingCycleApp', ['ui.router', 'toastr'])

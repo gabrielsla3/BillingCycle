@@ -1,3 +1,5 @@
+(function(){
+
 angular.module('billingCycleApp').config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider){
         $stateProvider.state('dashboard', {
             url: '/dashboard',
@@ -10,3 +12,5 @@ angular.module('billingCycleApp').config(['$stateProvider','$urlRouterProvider',
         $urlRouterProvider.otherwise('/dashboard')
     }
 ]);
+
+})();

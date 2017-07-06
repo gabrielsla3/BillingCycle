@@ -1,3 +1,5 @@
+(function(){
+
 angular.module('billingCycleApp').factory('gridSystem', [function(){
     function toCssClasses(numbers){
         const cols = numbers ? numbers.split(' ') : []
@@ -15,3 +17,5 @@ angular.module('billingCycleApp').factory('gridSystem', [function(){
     //Factory sempre retorna um objeto
     return { toCssClasses }
 }]);
+
+})();
