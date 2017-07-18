@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const server = express();
 const AllowCors = require('./cors');
+const queryParser = require('express-query-int');
 
 //Indica que o bodyParser será capaz de interpretar mais coisas do que a especificação diz.
 //Toda requisição irá passar por este middleware
@@ -16,6 +17,8 @@ server.use(bodyParser.json());
 
 //Permite a utilização do cors
 server.use(AllowCors);
+
+server.use(queryParser());
 
 server.listen(port, function(){
   console.log(`BACKEND is running on port ${port}.`);
