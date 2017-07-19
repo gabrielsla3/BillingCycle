@@ -1,4 +1,4 @@
-(function(){
+(function () {
 
     angular.module('billingCycleApp').component('field', {
         bindings: {
@@ -10,8 +10,8 @@
             model: '=',
             readonly: '<'
         },
-        controller: ['gridSystem', function(gridSystem){
-            this.gridClasses = gridSystem.toCssClasses(this.grid);
+        controller: ['gridSystem', function (gridSystem) {
+            this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid);
         }],
         template: `
             <div class="{{ $ctrl.gridClasses }}">

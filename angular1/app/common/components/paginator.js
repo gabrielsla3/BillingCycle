@@ -1,4 +1,4 @@
-(function(){
+(function () {
     angular.module('billingCycleApp').component('paginator', {
         bindings: {
             url: '@',
@@ -6,10 +6,10 @@
         },
         controller: [
             '$location',
-            function($location){       
+            function ($location) {
                 this.pages = "2";
                 //Cria um array com todas as páginas
-                this.$onInit = function(){
+                this.$onInit = function () {
                     const pages = parseInt(this.pages) || 1;
                     this.pagesArray = Array(pages).fill(0).map((e, i) => i + 1);
                 }
@@ -23,7 +23,7 @@
                 //Se precisa ter o botão "Próximo"
                 this.hasNext = this.current < this.pages;
 
-                this.isCurrent = function(i){
+                this.isCurrent = function (i) {
                     return this.current == i;
                 }
             }
